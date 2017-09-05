@@ -8,7 +8,14 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    <!-- Font Awesome Icon -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <!-- Bootstrap social -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.css">
+
 
     <!-- CSS format page-->
     <style>
@@ -48,17 +55,8 @@
             margin: 150px 0px 50px 0px;
         }
 
-        .card-header {
-            background-color: #ffb84d;
-            color: white;
-        }
-
-        .reserve {
+        #reserve {
             margin: 15px;
-        }
-
-        .card {
-            margin: 0px 0px 40px 0px;
         }
 
         .reserve_table {
@@ -89,6 +87,21 @@
             position: absolute;
             bottom: 0px;
         }
+
+        #btn {
+            margin-top: 10px;
+        }
+
+        #section {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        #carousel-button {
+            right: 0px;
+            position: absolute;
+            bottom: 0px;
+        }
     </style>
 </head>
 
@@ -102,12 +115,12 @@
             <div class="container">
                 <div class="row">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
-                           <span class="navbar-toggler-icon"></span>
-                       </button>
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                     <div class="collapse navbar-collapse" id="Navbar">
                         <ul class="navbar-nav mr-3"></ul>
                         <a class="navbar-brand" href="index.html">
-                               <a class="navbar-brand" href=""><img src="img/logo.png" height="30" width="41"></a>
+                            <a class="navbar-brand" href=""><img src="img/logo.png" height="30" width="41"></a>
                         </a>
                         <ul class="navbar-nav mr-3">
                             <li class="nav-item active"><a class="nav-link" href="index.html"><span class="fa fa-home fa-lg"></span> Home</a></li>
@@ -117,7 +130,7 @@
                         </ul>
                         <!-- Call login modal -->
                         <span class="navbar-text">
-                               <a data-toggle="modal" data-target="#loginModal"><span class="fa fa-sign-in"></span>Login</a>
+                            <a data-toggle="modal" data-target="#loginModal"><span class="fa fa-sign-in"></span>Login</a>
                         </span>
                     </div>
                 </div>
@@ -143,8 +156,8 @@
                             </div>
                             <div class="form-check">
                                 <label class="form-check-label">
-                                        <input class="form-check-input" type="checkbox"> Remember me
-                                    </label>
+                                    <input class="form-check-input" type="checkbox"> Remember me
+                                </label>
                             </div>
                         </form>
                     </div>
@@ -168,19 +181,19 @@
                             <div class="modal-body">
                                 <form action="#">
                                     <div class="row">
-                                        <div class="col-md-2"><label class="number_of_guest"><h6>Number of guests</h6></label></div>
-                                        <div class="col-md-1"><input type="radio" name="1" value="1"><label class="1">1</label></div>
-                                        <div class="col-md-1"><input type="radio" name="1" value="2"><label class="1">2</label></div>
-                                        <div class="col-md-1"><input type="radio" name="1" value="3"><label class="1">3</label></div>
-                                        <div class="col-md-1"><input type="radio" name="1" value="4"><label class="1">4</label></div>
-                                        <div class="col-md-1"><input type="radio" name="1" value="5"><label class="1">5</label></div>
-                                        <div class="col-md-1"><input type="radio" name="1" value="6"><label class="1">6</label></div>
+                                        <div class="col-3"><label class="number_of_guest"><h6>Number of guests</h6></label></div>
+                                        <div class="col-1"><input type="radio" name="1" value="1"><label class="1">1</label></div>
+                                        <div class="col-1"><input type="radio" name="1" value="2"><label class="1">2</label></div>
+                                        <div class="col-1"><input type="radio" name="1" value="3"><label class="1">3</label></div>
+                                        <div class="col-1"><input type="radio" name="1" value="4"><label class="1">4</label></div>
+                                        <div class="col-1"><input type="radio" name="1" value="5"><label class="1">5</label></div>
+                                        <div class="col-1"><input type="radio" name="1" value="6"><label class="1">6</label></div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-2">
+                                    <div class="row" id="section">
+                                        <div class="col-sm-2">
                                             <h6>Section</h6>
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-sm-6">
                                             <div class="btn-group" data-toggle="buttons">
                                                 <label class="btn btn-success">
                                                     <input type="checkbox" checked autocomplete="off">Non-Smoking
@@ -190,38 +203,39 @@
                                                 </label>
                                             </div>
                                         </div>
-
                                     </div>
 
                                     <div class="row">
-                                        <div class="col-md-2">
+                                        <div class="col-sm-2">
                                             <label for="date_and_time"><h6>Date and Time</h6></label>
                                         </div>
-                                        <div class="col-md-4">
+                                        <div class="col-sm-4">
                                             <div class="input-group">
                                                 <span class="input-group-addon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
                                                 <input type="text" class="form-control" id="date" placeholder="Date">
                                             </div>
                                         </div>
-                                        <div class="col-md-4">
+                                        <div class="col-sm-4">
                                             <div class="input-group">
                                                 <span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
                                                 <input type="text" class="form-control" id="time" placeholder="Time">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="reserve">
-                                        <div class="row">
-                                            <div class="col-md-2 offset-md-2">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <button type="submit" class="btn btn-primary">Reserve</button>
-                                            </div>
+
+
+                                    <div class="row" id="reserve">
+                                        <div class="col-sm-2 offset-sm-2">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <button type="submit" class="btn btn-primary">Reserve</button>
                                         </div>
                                     </div>
 
+
                                 </form>
+
                             </div>
                         </div>
                     </div>
@@ -234,8 +248,10 @@
                 <div class="row">
                     <div class="col-md-6">
                         <h1>Ristorante con Fusion</h1>
-                        <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking
-                            creations will tickle your culinary senses!</p>
+                        <p>
+                            We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will
+                            tickle your culinary senses!
+                        </p>
                     </div>
                     <div class="col-md-4">
                         <div class="col col-sm align-self-center">
@@ -260,7 +276,7 @@
                             <div class="carousel-item active">
                                 <img class="d-block img-fluid" src="img/uthappizza.png" alt="Uthappizza">
                                 <div class="carousel-caption d-none d-md-block">
-                                    <h2 class="mt-0">Uthappizza <span class="badge badge-pill badge-default">$4.99</span></h2>
+                                    <h2 class="mt-0">Uthappizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-default">$4.99</span></h2>
                                     <p class="hidden-xs-down">
                                         A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes,
                                         Vidalia onion, Guntur chillies and Buffalo Paneer.
@@ -271,9 +287,11 @@
                                 <img class="d-block img-fluid" src="img/buffet.png" alt="Weekend Grand Buffet">
                                 <div class="carousel-caption d-none d-md-block">
                                     <h2>Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
-                                    <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing
-                                        appetizers, six main entrees and five choicest desserts. Free flowing bubbly and
-                                        soft drinks. All for just $19.99 per person </p>
+                                    <p>
+                                        Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and
+                                        five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99
+                                        per person
+                                    </p>
                                 </div>
                             </div>
                             <div class="carousel-item">
@@ -300,21 +318,22 @@
                     <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
                     </a>
-                    <div class="btn-group" id="carouselButtons">
+                    <a>
                         <button class="btn btn-danger btn-sm" id="carousel-button">
                             <span id="carousel-button-icon" class="fa fa-pause"></span>
-                        </button>
-                    </div>
+                        </button>   
+                    </a>
+
                 </div>
             </div>
         </div>
         <div class="class1">
             <div class="row">
-                <div class="col-12 col-md-8">
+                <div class="col-12 col-sm-9">
                     <div class="media">
                         <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/uthappizza.png" alt="Uthappizza">
                         <div class="media-body">
-                            <h2 class="mt-0">Uthappizza <span class="badge badge-pill badge-default">$4.99</span></h2>
+                            <h2 class="mt-0">Uthappizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-default">$4.99</span></h2>
                             <p class="hidden-xs-down">
                                 A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes,
                                 Vidalia onion, Guntur chillies and Buffalo Paneer.
@@ -322,7 +341,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-sm-3">
                     <h3>Our Lipsmacking Culinary Creations</h3>
                 </div>
             </div>
@@ -331,14 +350,15 @@
 
         <div class="class2">
             <div class="row">
-                <div class="col-12 col-md-3">
+                <div class="col-12 col-sm-3">
                     <h3>This Month's Promotions</h3>
                 </div>
-                <div class="col-12 col-md-7">
+                <div class="col-12 col-sm-7">
                     <h2>Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
-                    <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers,
-                        six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99
-                        per person </p>
+                    <p>
+                        Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and
+                        five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person
+                    </p>
                 </div>
                 <div class="col-md-2">
                     <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/buffet.png" alt="Grand Buffet">
@@ -349,10 +369,10 @@
 
         <div class="class3">
             <div class="row">
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-sm-4">
                     <h3>Meet our Culinary Specialists</h3>
                 </div>
-                <div class="col-12 col-md-8">
+                <div class="col-12 col-sm-8">
                     <div class="media">
                         <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/alberto.png" alt="Alberto Somayya">
                         <div class="media-body">
@@ -367,13 +387,14 @@
                 </div>
             </div>
         </div>
+
     </div>
 
 
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-sm-4 col-6">
                     <h5>Links</h5>
                     <ul>
                         <li><a href="#">Home</a></li>
@@ -382,35 +403,55 @@
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4">
+                <div class="col-sm-4 col-6">
                     <h5>Our Address</h5>
                     <address>
-                        121, Clear Water Bay Road<br> Clear Water Bay, Kowloon<br> HONG KONG<br> Tel.: +852 1234 5678<br>                        Fax: +852 8765 4321<br> Email: <a href="mailto:confusion@food.net">confusion@food.net</a>
+                        121, Clear Water Bay Road<br> Clear Water Bay, Kowloon<br> HONG KONG<br>
+                        <i class="fa fa-phone" aria-hidden="true"></i> +852 1234 5678<br>
+                        <i class="fa fa-fax" aria-hidden="true"></i> +852 8765 4321<br>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <a href="mailto:confusion@food.net">confusion@food.net</a>
                     </address>
                 </div>
-                <div class="col-md-4">
-                    <div>
-                        <a href="http://google.com/+">Google+</a>
-                        <a href="http://www.facebook.com/profile.php?id=">Facebook</a>
-                        <a href="http://www.linkedin.com/in/">LinkedIn</a>
-                        <a href="http://twitter.com/">Twitter</a>
-                        <a href="http://youtube.com/">YouTube</a>
-                        <a href="mailto:">Mail</a>
+                <div class="col-sm-4">
+                    <div align="center">
+                        <a href="http://google.com/+" class="btn btn-social-icon btn-google"><i class="fa fa-google-plus-square"></i></a>
+                        <a href="http://www.facebook.com/profile.php?id=" class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="http://www.linkedin.com/in/" class="btn btn-social-icon btn-linkedin"><i class="fa fa-linkedin"></i></a>
+                        <a href="http://twitter.com/" class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="http://youtube.com/" class="btn btn-social-icon btn-youtube"><i class="fa fa-youtube"></i></a>
+                        <a href="mailto:" class="btn btn-social-icon btn-envelope"><i class="fa fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
             <div>
                 <div>
-                    <p class="col-auto">© Copyright 2015 Ristorante Con Fusion</p>
+                    <p class="col-auto" align="center">© Copyright 2015 Ristorante Con Fusion</p>
                 </div>
             </div>
         </div>
     </footer>
 
+
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/tether/dist/js/tether.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+
+    <script>
+        $("#carousel-button").click(function () {
+            if ($("#carousel-button").children("span").hasClass('fa-pause')) {
+                $("#mycarousel").carousel('pause');
+                $("#carousel-button").children("span").removeClass('fa-pause');
+                $("#carousel-button").children("span").addClass('fa-play');
+            }
+            else if ($("#carousel-button").children("span").hasClass('fa-play')) {
+                $("#mycarousel").carousel('cycle');
+                $("#carousel-button").children("span").removeClass('fa-play');
+                $("#carousel-button").children("span").addClass('fa-pause');
+            }
+        });
+    </script>
 
 </body>
 
